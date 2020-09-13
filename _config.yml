@@ -1,3 +1,20 @@
+# Developer's Note: This is a sample _config.yml file offered with
+# jekyll-theme-prologue for your convenience. To use it, move it to your
+# project's root directory. Please note that the following lines are
+# NECESSARY for Prologue to work correctly:
+#
+# theme: jekyll-theme-prologue
+# collections: [sections]
+#
+# They activate the theme and tell Jekyll to find your homepage content
+# in /_sections. Note where "sections" starts with an underscore
+# and where it doesn't. The social settings will make links to
+# Twitter, etc., but only if you give the URL.
+#
+# Also, be sure to customize url and baseurl for your site.
+#
+# ---------------------------------------------------------------
+#
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -13,71 +30,35 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Gray
-email: email@email.com
+title: Your awesome title
+subtitle: Your awesome subtitle
 description: >- # this means to ignore newlines until "baseurl:"
-  Lorem Ipsum
-url: "https://brunofolle.com.br" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/" # the subpath of your site, e.g. /blog
+  This is the demo site for a Jekyll theme version of
+  HTML5 UP's sleek, responsive site template Prologue.
+author: Your Incredible Name
+email: your-email@example.com
+avatar: assets/images/avatar.jpg
 
-# Build settings
-markdown: kramdown
-theme: gray
-permalink: /:title/
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-paginate
+# You'll want to customize url and baseurl for your own site:
+baseurl: "/jekyll-theme-prologue" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-exclude: [
-  'Gemfile', 
-  'Gemfile.lock', 
-  'node_modules', 
-  'Gemfile',
-  'gray.gemspec',
-  'Gulpfife.js', 
-  'package.json',
-  'package-lock.json',
-  'LICENSE.txt',
-  'README.md',
-  'yarn.lock',
-  '.gitignore'
-]
+# Social settings
+# Make sure to include the full url including protocol, e.g. https://github.com/chrisbobbe
+twitter_url:
+facebook_url:
+googleplus_url:
+instagram_url:
+linkedin_url:
+github_url:
+stackoverflow_url:
+pinterest_url:
+slack_url:
+dribbble_url:
 
-#number posts for paginate
-paginate: 20
-paginate_path: /page/:num
-locale: EN
+# Google Analytics Tracking ID goes here:
+google_analytics:
 
-#new variables:
-
-#social newtworks
-facebookurl: ''
-twitterurl: ''
-youtubeurl: ''
-stackoverflowurl: ''
-githuburl: ''
-instagramurl: ''
-
-#for analitycs
-idanalitycs: ''
-
-#language site
-language: ''
-
-#google verification
-googleverify: ''
-
-#email formspree
-emailform: email@email.com
-
-#disqus 
-disqus_user: 
-
-#about-me
-aboutme: Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, odit? Quibusdam atque laudantium debitis, officia esse nobis dolor, dolorem error eum, eos ea. Illum quae recusandae deserunt quo, minus ex!
-aboutmeimg: https://www.placecage.com/150/150
+# The following settings are NECESSARY for the Prologue theme to run:
+theme: jekyll-theme-prologue
+collections: [sections]
