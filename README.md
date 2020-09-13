@@ -1,50 +1,32 @@
-# PRoJEct-NeGYa
+# About
 
-黑客帝国掉字母儿风格的个人主页模板。
+This is my blog based on jekyll. And I change the style and interactive. If you want to use this model of the blog. **Please give a star at this repository**. Then you can clone it as your blog model.
 
-版本： v2.0
+You can visit [here](http://gaohaoyang.github.io) to see this blog.
 
-## 特性
+---
 
-1. 狂拽酷炫
-2. 代码高亮
-3. MathJax公式
-4. 文章索引
-5. 高度可定制化
-6. 加密内容
+这是我的博客，基于 jekyll。我改了所有默认的样式和交互。如果你想使用这个博客模板。**请先在这个仓库上点个star吧**，这也是对我的肯定和鼓励，谢谢了。然后你可以克隆这个仓库用作你自己的博客。
 
-## 更新日志
+博客访问地址：[点击这里](http://gaohaoyang.github.io)
 
-2020.7.24: v2.0 修改工程结构，优化scss文件结构
+**使用时请注明模板来源:  Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
 
-2019.7.17：更新说明文件
+<!--
 
-2019.6.15：v1.0 正式版
+## 被引用信息
 
-## 使用方法
+使用了我的模板并写明来源的人：   
 
-* 下载或者fork到自己的github仓库里
-* 修改_config.yml文件
-* （自定义域名）修改CNAME文件
-* 修改pages/index.md文件，自定义主页
-* 删除_posts/文件夹里的文件，添加自己的文章
-* 同步到github远程仓库
-* 将加密内容作为加密文本的id
-  * 可使用在线工具加密文本：[sjcl官方](http://bitwiseshiftleft.github.io/sjcl/demo/)  [bcqlr.com](http://bcqlr.com/sjcl/)
+* [dreamholy](http://dreamholy.github.io/)
 
-## 工程结构
+没有注明来源的人：
 
-网站内容：
-* _posts：文章
-* pages：页面
-* assets/img：图
+* [yangshuailing](http://yangshuailing.github.io/com/)
+* [huapu728](http://huapu728.github.io/)
+* [greatbuger](http://greatbuger.github.io/) 
 
-功能样式：
-* _includes/：子页面模块
-* _layouts/：页面模板（单纯地组合子页面模块）
-* assets/css/：样式表文件
-* assets/fonts/：字体文件
-* assets/js/：脚本文件
-* _config.yml：配置文件
-* _sass/：分类的scss样式表文件
+
+-->
+
 
