@@ -1,121 +1,72 @@
-/*
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+// toggle toc -> header.html -> .span_right .popup_btn
+function toggle_toc() {
+    var popup = document.getElementById("popup_toc");
+    popup.classList.toggle("show");
+}
 
-(function($) {
+//scroll page -> header.html -> .span_right prev & next btn
+function scroll_percentage(mtpler) {
+    document
+        .getElementById("div_atcl")
+        .scrollBy(0, window.innerHeight * mtpler);
+}
 
-	skel.breakpoints({
-		wide: '(min-width: 961px) and (max-width: 1880px)',
-		normal: '(min-width: 961px) and (max-width: 1620px)',
-		narrow: '(min-width: 961px) and (max-width: 1320px)',
-		narrower: '(max-width: 960px)',
-		mobile: '(max-width: 736px)'
-	});
+// toggle entire page -> header.html -> #mxmz_btn
+function toggle_maximize() {
+    if (ctner_state == 0) {
+        ctner.style.width = "100%";
+        ctner.style.height = "100%";
+        ctner.style.top = "0";
+        ctner.style.maxWidth = "100%";
+        if (document.getElementById("mxmz_text")) {
+            document.getElementById("mxmz_text").innerHTML = "Restore";
+        }
+        ctner_state = 1;
+    } else if (ctner_state == 1) {
+        ctner.style.width = "84%";
+        ctner.style.height = "97%";
+        ctner.style.top = "2%";
+        ctner.style.maxWidth = "1240px";
+        if (document.getElementById("mxmz_text")) {
+            document.getElementById("mxmz_text").innerHTML = "Maximize";
+        }
+        ctner_state = 0;
+    }
+}
 
-	$(function() {
+// Decrypt secret message -> header.html -> #asc_btn
+function apply_token() {
+    // perform decryption
+    function decrypt_all(pwd, class_name) {
+        var elem_clct = document.getElementsByClassName(class_name);
+        if (elem_clct.length == 0) {
+            console.log("No texts to decrypt!");
+            return false;
+        }
+        for (acc = 0; acc < elem_clct.length; acc++) {
+            var encrypted = elem_clct[acc].id;
+            var ct =
+                '{"iv":"' +
+                encrypted.substring(0, 22) +
+                '==",salt:"","ct":"' +
+                encrypted.substring(22) +
+                '"}';
+            try {
+                var txt = sjcl.json.decrypt(pwd, ct);
+            } catch (e) {
+                alert("Invalid Access Token!");
+                return;
+            }
+            elem_clct[acc].innerHTML = txt;
+        }
+        return true;
+    }
+    // do html stuff then apply DECRYPT_ALL
+    var tkn = document.getElementById("acs_tkn");
+    if (decrypt_all(tkn.value, "encrypted")) {
+        tkn.style.display = "none";
+        document.getElementById("acs_btn").style.display = "none";
+    }
+}
 
-		var	$window = $(window),
-			$body = $('body');
 
-		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
-
-			$window.on('load', function() {
-				$body.removeClass('is-loading');
-			});
-
-		// CSS polyfills (IE<9).
-			if (skel.vars.IEVersion < 9)
-				$(':last-child').addClass('last-child');
-
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
-
-		// Prioritize "important" elements on mobile.
-			skel.on('+mobile -mobile', function() {
-				$.prioritize(
-					'.important\\28 mobile\\29',
-					skel.breakpoint('mobile').active
-				);
-			});
-
-		// Scrolly links.
-			$('.scrolly').scrolly();
-
-		// Nav.
-			var $nav_a = $('#nav a.scrolly');
-
-			// Scrolly-fy links.
-				if($nav_a.scrolly()){
-					$nav_a
-						.scrolly()
-						.on('click', function(e) {
-
-							var t = $(this),
-								href = t.attr('href');
-
-							if (href[0] != '#')
-								return;
-
-							e.preventDefault();
-
-							// Clear active and lock scrollzer until scrolling has stopped
-								$nav_a
-									.removeClass('active')
-									.addClass('scrollzer-locked');
-
-							// Set this link to active
-								t.addClass('active');
-
-						});
-				}
-
-			// Initialize scrollzer.
-				var ids = [];
-
-				$nav_a.each(function() {
-
-					var href = $(this).attr('href');
-
-					if (href[0] != '#')
-						return;
-
-					ids.push(href.substring(1));
-
-				});
-
-				$.scrollzer(ids, { pad: 200, lastHack: true });
-
-		// Header (narrower + mobile).
-
-			// Toggle.
-				$(
-					'<div id="headerToggle">' +
-						'<a href="#header" class="toggle"></a>' +
-					'</div>'
-				)
-					.appendTo($body);
-
-			// Header.
-				$('#header')
-					.panel({
-						delay: 500,
-						hideOnClick: true,
-						hideOnSwipe: true,
-						resetScroll: true,
-						resetForms: true,
-						side: 'left',
-						target: $body,
-						visibleClass: 'header-visible'
-					});
-
-			// Fix: Remove transitions on WP<10 (poor/buggy performance).
-				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
-					$('#headerToggle, #header, #main')
-						.css('transition', 'none');
-
-	});
-
-})(jQuery);

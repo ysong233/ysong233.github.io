@@ -1,4 +1,7 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+Jekyll Assets: start scss files with two lines of triple dashes
 ---
-@import "jekyll-theme-prologue";
+
+@charset "utf-8";
+
+@import "black_n_green";

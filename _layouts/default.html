@@ -1,14 +1,19 @@
-<!DOCTYPE HTML>
-<!--
-Prologue by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-Jekyll integration by Chris Bobbe | chrisbobbe.github.io
--->
+<!DOCTYPE html>
 <html>
-	{%- include head.html -%}
-	<body>
-		{{- content -}}
-		{%- include footer.html -%}
-	</body>
+  {% include head.html %}
+  <body class="page">
+    {% include background.html %}
+    <div class="container" id="ctner">
+      {% include header.html %}
+      <div class="div_article" id="div_atcl">       
+        <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
+          {{content}}
+          {% include list_of_articles.html %}
+        </article>
+          {% if page.footer == true %}
+          {% include footer.html %}
+          {% endif %}
+      </div>
+    </div>
+  </body>
 </html>

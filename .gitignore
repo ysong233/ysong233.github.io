@@ -1,4 +1,28 @@
-/_site
-*.gem
+#-------------------
+# Emacs
+*~
+*.elc
+[#]*[#]
+*[#]
+.[#]*
+
+
+#-------------------
+# OS junk
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+#-------------------
+# site
+_site
 .sass-cache
+.jekyll-metadata
 Gemfile.lock
+.jekyll-metadata
+.vscode
+.idea
+.DS_Store
+
