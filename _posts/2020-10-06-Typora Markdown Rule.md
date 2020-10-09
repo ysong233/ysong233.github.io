@@ -11,6 +11,10 @@ category: Software Tutorial
 
 Using Typora to write markdown blogs, we can see the real-time results, which is a great advantage comparing with other markdown softwares. The official Markdown compiler that Typora supports is [Github flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
+# Add optional syntax support
+
+Typora-Prederences-markdown-Syntax Support
+
 # Configure Typora as default for .markdown document
 
 > right click any .markdown document -> Get Info -> Choose submenu"Open with" -> Change it to "Typora"
@@ -45,6 +49,12 @@ For example:
 
 > For example: Command + Option + Q
 
+###### Formula
+
+$E=mc^{2}$
+
+Add formulas in two $.
+
 ###### Building a unordered list
 
 "*/+/- + Space + Sentences", using "Delete + Tab + Shift"  or "command+option+U"to get out.
@@ -70,6 +80,8 @@ For example "1. Hello"
  "~ + subscript"
 
 For example: "H + ~ 2 + ~ O"
+
+H~2~O
 
 ### Horizental Line
 
