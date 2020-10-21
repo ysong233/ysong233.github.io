@@ -49,5 +49,21 @@ High Variance: (More data, regularization, better NN structure)
 
 ## Regularization
 
+P-problem: the question can be solved in Polynomial time
+
+NP-problem: a solution to the question can be verified correct/not in polynomial time
+
+NP-hard problem: All NP problem can be reduced to one problem , that problem is called NP-hard
+
+If an NP-hard problem is also NP, it's NP-complet.
+
+Polynomial time: O(n^m) m is a constant. Time grows with input data number.
+
+==Lagrange Multiplier==： [如何理解拉格朗日乘子法？](https://www.zhihu.com/question/38586401)
+
+
+
+
+
 
 
