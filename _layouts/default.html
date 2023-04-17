@@ -11,7 +11,10 @@
       <header>
         <h1>{{ site.title }}</h1>
       </header>
-      <main>{{ content }}</main>
+      <main class="content">
+		{% include sidebar.html %}
+		{{ content }}
+	  </main>
     </div>
   </body>
 </html>

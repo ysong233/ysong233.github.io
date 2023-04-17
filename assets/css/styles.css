@@ -38,3 +38,39 @@ white;
   color: #999;
 }
 
+.sidebar {
+  float: left;
+  width: 30%;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding-right: 2rem;
+  border-right: 1px solid #e1e1e1;
+}
+
+.content {
+  float: right;
+  width: 70%;
+}
+
+.post-preview {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.post-preview img {
+  width: 100%;
+  height: auto;
+}
+
+.post-preview h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.post-preview p {
+  color: #999;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
