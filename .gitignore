@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-
-.DS_Store
-.idea/inspectionProfiles/profiles_settings.xml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/workspace.xml
-.idea/ysong233.github.io.iml
-=======
-_site
-.sass-cache
-.jekyll-cache
+_site/
+.sass-cache/
+.jekyll-cache/
 .jekyll-metadata
-vendor
->>>>>>> 3f034f588adfe960806d3541ecfbb7c35c9915e8
+alembic-jekyll-theme-*.gem
+Gemfile.lock
+**/Gemfile.lock
+
