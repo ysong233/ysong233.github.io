@@ -12,7 +12,7 @@ Hello and welcome to my personal programming blog!
   
 I am a passionate software/hardware engineer interested in DL, LLM and AI Processor. 
   
-Throughout my career, I have had the pleasure of working on a variety of exciting and challenging projects, ranging from [Project 1] to [Project 2] and everything in between. Each project has presented unique challenges and opportunities for personal growth, and I have always embraced them with a can-do attitude and a willingness to learn.
+My doctor research 
   
 My goal with this blog is to share my own experiences and insights, as well as to learn and grow alongside my readers. From tips on how to improve your coding skills, to insights on the latest technologies and trends, I hope to offer something of value to everyone who stops by.
   
