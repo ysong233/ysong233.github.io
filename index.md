@@ -1,13 +1,22 @@
 ---
-title: About Alembic
+title: CCS(Cozy Coding Space)
 feature_text: |
-  ## Alembic
-  A Jekyll boilerplate theme designed to be a starting point for any Jekyll website
+  ## Yiming SONG
+  Art is long but life is short.
+
 feature_image: "https://picsum.photos/1300/400?image=989"
-excerpt: "Alembic is a starting point for [Jekyll](https://jekyllrb.com/) projects. Rather than starting from scratch, this boilerplate is designed to get the ball rolling immediately. Install it, configure it, tweak it, push it."
+excerpt: Thanks Alembic for providing **[templates](https://github.com/daviddarnes/alembic#installation)**
 ---
 
-Alembic is a starting point for [Jekyll](https://jekyllrb.com/) projects. Rather than starting from scratch, this boilerplate is designed to get rolling immediately. Install it, configure it, tweak it, push it.
+Hello and welcome to my personal programming blog!
+  
+I am a passionate software/hardware engineer interested in DL, LLM and AI Processor. 
+  
+Throughout my career, I have had the pleasure of working on a variety of exciting and challenging projects, ranging from [Project 1] to [Project 2] and everything in between. Each project has presented unique challenges and opportunities for personal growth, and I have always embraced them with a can-do attitude and a willingness to learn.
+  
+My goal with this blog is to share my own experiences and insights, as well as to learn and grow alongside my readers. From tips on how to improve your coding skills, to insights on the latest technologies and trends, I hope to offer something of value to everyone who stops by.
+  
+So whether you are a seasoned programmer or just getting started on your coding journey, I invite you to join me on this exciting adventure. Let's learn together and push the boundaries of what's possible with programming!
 
 {% include button.html text="Fork it" icon="github" link="https://github.com/daviddarnes/alembic" color="#0366d6" %} {% include button.html text="Buy me a coffee ☕️" link="https://buymeacoffee.com/daviddarnes#support" color="#f68140" %} {% include button.html text="Tweet it" icon="twitter" link="https://twitter.com/intent/tweet/?url=https://alembic.darn.es&text=Alembic%20-%20A%20Jekyll%20boilerplate%20theme&via=DavidDarnes" color="#0d94e7" %} {% include button.html text="Install Alembic ⚗️" link="https://github.com/daviddarnes/alembic#installation" %}
 
