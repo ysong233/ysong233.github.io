@@ -167,7 +167,9 @@ cyberpunk:
   text_color: "#ffffff"
   neon_glow: true
   matrix_rain: false
-  glitch_effect: false
+  glitch_effect: true
+  typewriter: true
+  scanlines: true
 
 # 搜索配置
 lunr:
@@ -175,7 +177,4 @@ lunr:
   index: /lunr.json
 
 # Markdown写作配置
-markdown:
-  gfm: true
-  breaks: true
-  syntax_highlighting: true
+# Note: Markdown processor configured for compatibility

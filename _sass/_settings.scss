@@ -1,21 +1,21 @@
-// Background colours
-$backgroundColour: #ffffff !default;
-$codeBackgroundColour: #fafafa !default;
-$featureBackgroundColour: #f9fafa !default;
-$accentColour: #05bf85 !default;
+// Background colours - Cyberpunk theme
+$backgroundColour: #0a0a0a !default;
+$codeBackgroundColour: #050505 !default;
+$featureBackgroundColour: #1a1a1a !default;
+$accentColour: #00ff9d !default;
 
-// Text colours
-$headingColour: #242e2b !default;
-$bodyColour: #384743 !default;
-$linkColour: #05bf85 !default;
-$hoverColour: #008000 !default;
-$focusColour: #fa407a !default;
-$captionColour: #a8adac !default;
+// Text colours - Cyberpunk theme
+$headingColour: #bd00ff !default;
+$bodyColour: #ffffff !default;
+$linkColour: #00ff9d !default;
+$hoverColour: #bd00ff !default;
+$focusColour: #00ff9d !default;
+$captionColour: #888888 !default;
 $white: #ffffff !default;
 
-// Typography
+// Typography - Cyberpunk theme
 $bodytype: (
-  font-family: "Georgia, serif",
+  font-family: 'Share Tech Mono, monospace',
   regular: 400,
   bold: 700,
   italic: italic,
@@ -23,14 +23,14 @@ $bodytype: (
 ) !default;
 
 $headingtype: (
-  font-family: '"Merriweather", serif',
+  font-family: 'Orbitron, sans-serif',
   regular: 400,
   bold: 700,
   cap-height: 0.75
 ) !default;
 
 $monospacetype: (
-  font-family: "Menlo, monospace",
+  font-family: 'Share Tech Mono, monospace',
   regular: 400,
   cap-height: 0.68
 ) !default;

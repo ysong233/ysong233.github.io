@@ -1,0 +1,617 @@
+/* 赛博朋克主题样式 - Enhanced Version */
+
+/* Feature Section - Typewriter Effect Target */
+.feature .container h1,
+.feature .container h2,
+.feature .container h3,
+.feature .container p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.feature {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.feature::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 157, 0.1) 0%,
+    rgba(189, 0, 255, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+.feature::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.feature .container {
+  position: relative;
+  z-index: 3;
+}
+
+/* Cyberpunk Grid Background for Feature Section */
+.feature .typeset {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(5, 5, 5, 0.95) 100%);
+  border: 2px solid var(--cyber-primary);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 0 30px rgba(0, 255, 157, 0.3),
+              inset 0 0 20px rgba(0, 255, 157, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature .typeset::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image:
+    linear-gradient(rgba(0, 255, 157, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 157, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Header/Navigation Cyberpunk Styling */
+header nav {
+  background: linear-gradient(180deg, var(--cyber-light) 0%, var(--cyber-bg) 100%);
+  border-bottom: 2px solid var(--cyber-primary);
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+  position: relative;
+}
+
+header nav::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyber-primary), var(--cyber-secondary), var(--cyber-primary), transparent);
+  animation: border-flow 3s linear infinite;
+}
+
+@keyframes border-flow {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+nav a {
+  color: var(--cyber-primary);
+  text-shadow: 0 0 5px var(--cyber-primary);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a:hover {
+  color: var(--cyber-secondary);
+  text-shadow: 0 0 10px var(--cyber-secondary);
+  transform: translateY(-2px);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--cyber-secondary);
+  box-shadow: 0 0 10px var(--cyber-secondary);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Card and Post Styling */
+article, .card {
+  background: linear-gradient(135deg, var(--cyber-light) 0%, var(--cyber-darker) 100%);
+  border: 1px solid var(--cyber-primary);
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+article:hover, .card:hover {
+  box-shadow: 0 0 30px rgba(189, 0, 255, 0.5);
+  border-color: var(--cyber-secondary);
+  transform: translateY(-5px);
+}
+
+article::before, .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+article:hover::before, .card:hover::before {
+  left: 100%;
+}
+
+/* Cyberpunk Corner Accents for Cards */
+article::after, .card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid var(--cyber-secondary);
+  border-right: 2px solid var(--cyber-secondary);
+  box-shadow: 0 0 10px var(--cyber-secondary);
+}
+
+/* Button Styling */
+button, .btn, button[type="submit"] {
+  background: linear-gradient(135deg, transparent 0%, transparent 100%);
+  border: 2px solid var(--cyber-primary);
+  color: var(--cyber-primary);
+  text-shadow: 0 0 5px var(--cyber-primary);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover, .btn:hover, button[type="submit"]:hover {
+  background: linear-gradient(135deg, rgba(0, 255, 157, 0.1) 0%, rgba(0, 255, 157, 0.2) 100%);
+  color: var(--cyber-bg);
+  box-shadow: 0 0 20px var(--cyber-primary);
+  text-shadow: 0 0 5px var(--cyber-primary);
+  border-color: var(--cyber-secondary);
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--cyber-secondary);
+  text-shadow: 0 0 10px var(--cyber-secondary);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-shadow: 0 0 20px var(--cyber-secondary), 0 0 40px var(--cyber-secondary);
+}
+
+h2 {
+  font-size: 2rem;
+  text-shadow: 0 0 15px var(--cyber-secondary), 0 0 30px var(--cyber-secondary);
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px var(--cyber-secondary), 0 0 20px var(--cyber-secondary);
+}
+
+/* Code Block Styling */
+pre, code {
+  background: var(--cyber-darker);
+  border: 1px solid var(--cyber-primary);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+code {
+  color: var(--cyber-primary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 255, 157, 0.2);
+}
+
+pre {
+  padding: 15px;
+  overflow-x: auto;
+  border-left: 3px solid var(--cyber-secondary);
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.2);
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* Link Styling */
+a {
+  color: var(--cyber-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+a:hover {
+  color: var(--cyber-secondary);
+  text-shadow: 0 0 10px var(--cyber-secondary);
+}
+
+/* Input and Form Styling */
+input, textarea, select {
+  background: var(--cyber-light);
+  border: 1px solid var(--cyber-primary);
+  color: var(--cyber-text);
+  box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+  transition: all 0.3s ease;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 20px rgba(189, 0, 255, 0.5);
+  border-color: var(--cyber-secondary);
+  background: var(--cyber-darker);
+}
+
+/* Footer Styling */
+footer {
+  border-top: 2px solid var(--cyber-secondary);
+  box-shadow: 0 -10px 30px rgba(189, 0, 255, 0.3);
+  background: linear-gradient(180deg, var(--cyber-bg) 0%, var(--cyber-light) 100%);
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyber-primary), var(--cyber-secondary), var(--cyber-primary));
+  animation: border-flow 3s linear infinite;
+}
+
+/* Typewriter Cursor Styling */
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: var(--cyber-primary);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .feature .typeset {
+    padding: 1rem;
+    border-width: 1px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    text-shadow: 0 0 10px var(--cyber-secondary), 0 0 20px var(--cyber-secondary);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-shadow: 0 0 8px var(--cyber-secondary), 0 0 16px var(--cyber-secondary);
+  }
+
+  article:hover, .card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Tablet Responsiveness */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .feature .typeset {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Performance optimization: Reduced animations when paused */
+body.cyber-paused *,
+body.cyber-paused *::before,
+body.cyber-paused *::after {
+  animation-play-state: paused !important;
+}
+
+/* Cyberpunk Logo Styling */
+.cyberpunk-logo {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.logo-container {
+  position: relative;
+  padding: 0.5rem;
+  border: 1px solid var(--cyber-primary);
+  background: linear-gradient(135deg, rgba(0, 255, 157, 0.05) 0%, rgba(0, 0, 0, 0.1) 100%);
+  box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+  transition: all 0.3s ease;
+}
+
+.logo-container::before,
+.logo-container::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--cyber-secondary);
+  pointer-events: none;
+}
+
+.logo-container::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.logo-container::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+}
+
+.cyberpunk-logo:hover .logo-container {
+  box-shadow: 0 0 20px rgba(189, 0, 255, 0.4);
+  border-color: var(--cyber-secondary);
+  transform: scale(1.02);
+}
+
+/* Cyberpunk Navigation Styling */
+.cyberpunk-nav {
+  position: relative;
+}
+
+.cyberpunk-nav-list .item a {
+  position: relative;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 4px;
+  background: linear-gradient(135deg, rgba(0, 255, 157, 0.05) 0%, rgba(0, 0, 0, 0.1) 100%);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.cyberpunk-nav-list .item:hover a {
+  background: linear-gradient(135deg, rgba(189, 0, 255, 0.1) 0%, rgba(0, 255, 157, 0.05) 100%);
+  border-color: var(--cyber-primary);
+  box-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
+}
+
+.cyberpunk-nav-list .item--current a {
+  background: linear-gradient(135deg, rgba(189, 0, 255, 0.15) 0%, rgba(0, 255, 157, 0.1) 100%);
+  border-color: var(--cyber-secondary);
+  box-shadow: 0 0 15px rgba(189, 0, 255, 0.4);
+}
+
+/* Cyberpunk Button (Mobile Menu Toggle) */
+.cyberpunk-button {
+  background: linear-gradient(135deg, rgba(0, 255, 157, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+  border: 1px solid var(--cyber-primary);
+  color: var(--cyber-primary);
+  text-shadow: 0 0 5px var(--cyber-primary);
+  box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cyberpunk-button:hover {
+  background: linear-gradient(135deg, rgba(189, 0, 255, 0.1) 0%, rgba(0, 255, 157, 0.05) 100%);
+  border-color: var(--cyber-secondary);
+  color: var(--cyber-secondary);
+  text-shadow: 0 0 10px var(--cyber-secondary);
+  box-shadow: 0 0 15px rgba(189, 0, 255, 0.4);
+}
+
+/* Post Metadata Styling */
+.post-meta {
+  border-left: 2px solid var(--cyber-primary);
+  padding-left: 1rem;
+  color: var(--cyber-primary);
+  text-shadow: 0 0 5px var(--cyber-primary);
+  margin-bottom: 1rem;
+}
+
+/* Post Categories Tags */
+.post-categories a,
+.category-tag,
+.tag {
+  background: linear-gradient(135deg, rgba(0, 255, 157, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+  border: 1px solid var(--cyber-primary);
+  color: var(--cyber-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 3px var(--cyber-primary);
+}
+
+.post-categories a:hover,
+.category-tag:hover,
+.tag:hover {
+  background: linear-gradient(135deg, rgba(189, 0, 255, 0.15) 0%, rgba(0, 255, 157, 0.1) 100%);
+  border-color: var(--cyber-secondary);
+  color: var(--cyber-secondary);
+  text-shadow: 0 0 5px var(--cyber-secondary);
+  box-shadow: 0 0 10px rgba(189, 0, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Post Related Section */
+.related-posts {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(0, 255, 157, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+  border: 1px solid var(--cyber-primary);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.2);
+}
+
+.related-posts h3 {
+  margin-top: 0;
+  border-bottom: 2px solid var(--cyber-primary);
+  padding-bottom: 0.5rem;
+}
+
+/* Search Input Styling */
+.search-input {
+  width: 100%;
+  padding: 1rem;
+  background: var(--cyber-darker);
+  border: 2px solid var(--cyber-primary);
+  color: var(--cyber-text);
+  font-size: 1rem;
+  font-family: 'Share Tech Mono', monospace;
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.2);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--cyber-secondary);
+  box-shadow: 0 0 25px rgba(189, 0, 255, 0.4);
+  background: var(--cyber-light);
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Search Results */
+.search-results {
+  margin-top: 1rem;
+}
+
+.search-results li {
+  padding: 1rem;
+  border-left: 2px solid var(--cyber-primary);
+  background: var(--cyber-light);
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.search-results li:hover {
+  border-left-width: 4px;
+  border-left-color: var(--cyber-secondary);
+  background: linear-gradient(135deg, rgba(189, 0, 255, 0.1) 0%, rgba(0, 255, 157, 0.05) 100%);
+  box-shadow: 0 0 15px rgba(189, 0, 255, 0.3);
+}
+
+.search-results a {
+  color: var(--cyber-primary);
+  text-shadow: 0 0 3px var(--cyber-primary);
+}
+
+.search-results a:hover {
+  color: var(--cyber-secondary);
+}
+
+/* Share Buttons */
+.share-links a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--cyber-primary);
+  border-radius: 4px;
+  color: var(--cyber-primary);
+  text-shadow: 0 0 5px var(--cyber-primary);
+  transition: all 0.3s ease;
+}
+
+.share-links a:hover {
+  background: var(--cyber-primary);
+  color: var(--cyber-bg);
+  text-shadow: none;
+  box-shadow: 0 0 15px var(--cyber-primary);
+}
+
+/* Comments Section */
+#comments {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--cyber-light);
+  border: 1px solid var(--cyber-primary);
+  border-radius: 8px;
+}
+
+/* Table of Contents */
+.toc {
+  background: var(--cyber-light);
+  border: 1px solid var(--cyber-primary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.2);
+}
+
+.toc h3 {
+  margin-top: 0;
+  color: var(--cyber-secondary);
+  border-bottom: 1px solid var(--cyber-primary);
+  padding-bottom: 0.5rem;
+}
+
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc li a {
+  color: var(--cyber-primary);
+  padding: 0.25rem 0;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.toc li a:hover {
+  color: var(--cyber-secondary);
+  padding-left: 0.5rem;
+  text-shadow: 0 0 5px var(--cyber-secondary);
+}
+

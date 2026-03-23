@@ -52,6 +52,11 @@
 
     {% if site.service_worker != false %}{% include site-sw.html %}{% endif %}
 
+    <!-- Cyberpunk Effects Script -->
+    {% if site.cyberpunk.enabled and site.cyberpunk.neon_glow %}
+    <script src="{{ "/assets/scripts/cyberpunk.js" | relative_url }}"></script>
+    {% endif %}
+
     {% include site-before-end.html %}
   </body>
 
